@@ -3,6 +3,7 @@ import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 
 type FadeInOnScrollProps = {
+  children: React.ReactNode;
   transition?: { duration: number; delay: number; ease: string };
 };
 

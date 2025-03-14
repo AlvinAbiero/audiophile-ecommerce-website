@@ -1,29 +1,24 @@
-import { SimpleGrid, Image, Box } from '@chakra-ui/react'
-import { CategoryImage } from '../../_models/Product'
+import { SimpleGrid, Image, Box } from "@chakra-ui/react";
+import { CategoryImage } from "../../_models/Product";
 
 type ProductGalleryProps = {
-  first?: CategoryImage | undefined
-  second?: CategoryImage | undefined
-  third?: CategoryImage | undefined
-}
+  first?: CategoryImage | undefined;
+  second?: CategoryImage | undefined;
+  third?: CategoryImage | undefined;
+};
 
-
-const ProductGallery = ({
-  first,
-  second,
-  third,
-}) => {
+const ProductGallery = ({ first, second, third }: ProductGalleryProps) => {
   return (
-     <SimpleGrid
+    <SimpleGrid
       gridTemplateColumns={{
-        base: '1fr',
-        sm: '40% 1fr',
+        base: "1fr",
+        sm: "40% 1fr",
       }}
       templateAreas={{ sm: '"a c" "b c"' }}
-      mt={{ base: '5.5rem', sm: '7.5rem', lg: '10rem' }}
-      gap={{ base: '1.25rem' }}
+      mt={{ base: "5.5rem", sm: "7.5rem", lg: "10rem" }}
+      gap={{ base: "1.25rem" }}
     >
-      <Box as="picture" gridArea={{ sm: 'a' }}>
+      <Box as="picture" gridArea={{ sm: "a" }}>
         <source media="(min-width: 62em)" srcSet={first?.desktop} />
         <source media="(min-width: 30em)" srcSet={first?.tablet} />
         <Image
@@ -35,7 +30,7 @@ const ProductGallery = ({
           alt=""
         />
       </Box>
-      <Box as="picture" gridArea={{ sm: 'b' }}>
+      <Box as="picture" gridArea={{ sm: "b" }}>
         <source media="(min-width: 62em)" srcSet={second?.desktop} />
         <source media="(min-width: 30em)" srcSet={second?.tablet} />
         <Image
@@ -44,9 +39,10 @@ const ProductGallery = ({
           width="100%"
           borderRadius="0.5rem"
           height="100%"
+          alt=""
         />
       </Box>
-      <Box as="picture" gridArea={{ sm: 'c' }}>
+      <Box as="picture" gridArea={{ sm: "c" }}>
         <source media="(min-width: 62em)" srcSet={third?.desktop} />
         <source media="(min-width: 30em)" srcSet={third?.tablet} />
         <Image
@@ -55,10 +51,11 @@ const ProductGallery = ({
           width="100%"
           borderRadius="0.5rem"
           height="100%"
+          alt=""
         />
       </Box>
     </SimpleGrid>
-  )
-}
+  );
+};
 
-export default ProductGallery
+export default ProductGallery;
