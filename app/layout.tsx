@@ -3,15 +3,15 @@ import { Manrope } from "next/font/google";
 import { ReactNode } from "react";
 import { ChakraProvider } from "@chakra-ui/react";
 import { Provider } from "react-redux";
-import store from "@/_store/store";
-import theme from "@/styles/theme";
+import store from "./_store/index";
+import theme from "./_styles/theme";
 
-import Header from "@/_components/organisms/Header";
-import Footer from "@/_components/organisms/Footer";
-import ModalContextProvider from "@/_store/ModalContextProvider";
-import CartModal from "@/_components/organisms/CartModal";
-import CheckoutModal from "@/_components/organisms/CheckoutModal";
-import Overlay from "@/_components/atoms/Overlay";
+import Header from "./_components/organisms/Header";
+import Footer from "./_components/organisms/Footer";
+import ModalContextProvider from "./_store/ModalContextProvider";
+import CartModal from "./_components/organisms/CartModel";
+import CheckoutModal from "./_components/organisms/CheckoutModal";
+import Overlay from "./_components/atoms/Overlay";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
